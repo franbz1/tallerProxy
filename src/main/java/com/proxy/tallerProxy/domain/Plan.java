@@ -7,6 +7,8 @@ public enum Plan {
 
 	FREE(10, 50_000L),
 	PRO(60, 500_000L),
+	/** Low RPM for quick rate-limit demos (same monthly cap as FREE). */
+	DEMO_THROTTLED(2, 50_000L),
 	ENTERPRISE(Integer.MAX_VALUE, null);
 
 	private final int requestsPerMinute;

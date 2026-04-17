@@ -17,4 +17,6 @@ public interface MonthlyUsageRepository extends JpaRepository<MonthlyUsage, Long
 	@Modifying
 	@Query("DELETE FROM MonthlyUsage m WHERE m.yearMonth < :beforeYm")
 	int deleteByYearMonthBefore(@Param("beforeYm") int beforeYm);
+
+	void deleteByUser(AppUser user);
 }

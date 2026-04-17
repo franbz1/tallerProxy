@@ -16,4 +16,6 @@ public interface DailyUsageRepository extends JpaRepository<DailyUsage, Long> {
 	List<DailyUsage> findByUserAndUsageDateBetweenOrderByUsageDateAsc(AppUser user, LocalDate from, LocalDate to);
 
 	void deleteByUsageDateBefore(LocalDate cutoff);
+
+	void deleteByUser(AppUser user);
 }
